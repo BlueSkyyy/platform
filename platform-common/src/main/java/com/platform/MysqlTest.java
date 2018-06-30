@@ -16,7 +16,7 @@ public class MysqlTest {
     /**
      * 数据库url
      */
-    private static final String URL = "jdbc:mysql://localhost:3306/platform";
+    private static final String URL = "jdbc:mysql://192.168.230.129:3306/paltform";
     /**
      * 用户名
      */
@@ -24,7 +24,7 @@ public class MysqlTest {
     /**
      * 密码
      */
-    private static final String PASSWORD = "mysql123456";
+    private static final String PASSWORD = "115674";
     /**
      * mysql驱动程序
      */
@@ -48,12 +48,12 @@ public class MysqlTest {
             pre = con.prepareStatement(sql);
             result = pre.executeQuery();//执行查询
 
-            while (result.next()) {
-                // 当结果集不为空时
-                String username = result.getString("username");
-                String mobile = result.getString("mobile");
-                System.out.println("会员："+username + "；手机号：" +mobile);
-            }
+//            while (result.next()) {
+//                // 当结果集不为空时
+//                String username = result.getString("username");
+//                String mobile = result.getString("mobile");
+//                System.out.println("会员："+username + "；手机号：" +mobile);
+//            }
         } catch (ClassNotFoundException e) {
             //数据库驱动类异常处理
             System.out.println("Sorry,can`t find the Driver!");
